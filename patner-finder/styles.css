@@ -1,0 +1,43 @@
+*{
+    background-color: black;
+}
+
+.content{
+    color: aliceblue;
+    margin: 20% auto;
+    width: 50%;
+    border: 3px solid rgb(234, 234, 234);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+
+}
+#inputName{
+    color: rgb(0, 0, 0);
+    background-color: rgb(252, 249, 183);
+    border-radius: 5px;
+    width: inherit;
+    height: 20px;
+    text-align: center;
+    font-size: large;
+}
+#patnerBox{
+    color: aliceblue;
+    background-color: rgb(231, 102, 158);
+    margin:20px;
+    height: 45px;
+    display: none;
+    border-radius: 8px;
+    font-size: xx-large;
+    padding-top: 10px;
+    
+}
+
+button{
+    margin-top: 10px;
+    color: aliceblue;
+    background-color: rgb(99, 61, 149);
+    border: 3px solid rgb(234, 234, 234);
+    border-radius: 5px;
+}
