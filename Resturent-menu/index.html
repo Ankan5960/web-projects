@@ -1,0 +1,68 @@
+<DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ... -->
+    <!-- Ensure to include Bootstrap CSS as it's checked in the test cases -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <!-- ... -->
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">My Resturant</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0 w-75" onsubmit="search(event)">
+                <input class="form-control mr-sm-2 w-75" id="inputBox" type="search" placeholder="Search" aria-label="Search" oninput="searchMenu()" >
+                <button class="btn btn-outline-success my-2 my-sm-0" id="searchBtn" type="submit">Search</button>
+            </form>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" onclick="filterMenu('all')">All</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="filterMenu('starters')">Staters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="filterMenu('mains')">Main</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="filterMenu('desserts')">Desserts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="filterMenu('beverages')">Beverages</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="video-container">
+        <video id="circularVideo" autoplay muted loop>
+          <source src="video/0106(1).mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video> 
+    </div>
+      
+    <div class="row" id="menuItems" style="justify-content: center;"></div>
+
+    <!-- Menu items -->
+    <!-- Items will be inserted here by JavaScript -->
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html

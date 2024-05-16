@@ -1,17 +1,16 @@
-var patner1="";
 
-const femalepatner = ["Ankita","Subhasree","Smriti","Anushka","Srija","Kankana","Moumita","Somaroti","Jenifa","Priyanka","Pratysha","Sampreeti","Shuhani","Soni","Purba","Poushali","Neha"];
-const malepatnerpatner = ["Shuven","Rohan","Tanmoy","Writ","Jeet","Devraj","Subhadeep","Abhijaan","Abhik","Ayan","Abhradeep","Aritra","Binayak","Debojyoti","Joti","Manojit","Sujoy","Suprodip",];
+const femalepatner = ["Aaradhya","Aditi","Ananya","Aarohi","Diya","Ishika","Jasmine","Kavya","Meera","Neha","Pooja","Riya","Sakshi","Tanvi","Uma","Vanya","Zara"];
+const malepatnerpatner = ["Aarav","Aditya","Arjun","Dev","Harsh","Ishaan","Jay","Karan","Laksh","Mohan","Nikhil","Pranav","Rahul","Shiv","Tanay","Utkarsh","Vivek","Rohan"];
  
 function patnerName(gender,name){
     let number=Math.floor(Math.random() * (18 - 1 + 1)) + 1;
-    console.log(number);
     if(gender=='M'){
         patner1=femalepatner[number];
     }
     else{
         patner1=malepatnerpatner[number];
     }
+    return patner1;
 }
 
 var inputname=document.getElementById("inputName");
@@ -33,20 +32,27 @@ function GetName(){
         window.alert("Checked gender");
         return ;
     }
-    patnerName(gender,inputname.value);
-        if(!inputname.value){
-            window.alert("Enter name first");
-            return;
-        }
-        else if(!patner1){
-            patnerBox.innerHTML=`${inputname.value} you always be single `;
-            patnerBox.style.display="block";
-        }
-        else{
-            patnerBox.innerHTML=`${patner1} + ${inputname.value}`;
-            patnerBox.style.display="block";
-        }
+    var patner1 = patnerName(gender,inputname.value);
+    if(!inputname.value){
+        window.alert("Enter name first");
+        return;
+    }
+    else if(!patner1){
+        patnerBox.style.height="120px"
+        patnerBox.innerHTML=`${inputname.value} you always be single `;
+        patnerBox.style.display="block";
+    }
+    else{
+        patnerBox.style.height="45px";
+        var name=`${patner1} + ${inputname.value}`;
+        if(name.length>=15)
+            patnerBox.style.height="80px";        
+        patnerBox.innerHTML=name;
+        patnerBox.style.display="block";
+    }
 };
+
+
 
 function reponsive(){
     var w = window.innerWidth;
@@ -66,45 +72,3 @@ function reponsive(){
 }
 
 reponsive();
-
-//patnerName("M", "ankan");
-
-
-// let arr=[633,0,233];
-
-// for(let x in arr){
-//     console.log(arr[x]+" x value="+ x);
-// }
-
-// for(let x of arr){
-//     console.log(arr[x]) 
-// }
-
-// let i=0;
-// while(i<arr.length){
-//     console.log(arr[i]);
-//     i++;
-// }
-
-
-
-//var id=document.getElementById('div1');
-//id.innerHTML="Kannakan";
-
-// var classname=document.getElementsByClassName('divtype');
-// classname[2].innerHTML="ankan"
-
-// var query=document.querySelector(".divtype");
-// query.innerHTML="ggg";
-
-// var quary=document.querySelectorAll(".divtype");
-// quary[2].innerHTML="fff";
-
-// console.log(quary);
-
-// var tagname=document.getElementsByTagName('h1');
-
-// console.log(tagname);
-
-// tagname[0].innerHTML ="ankan";
-
